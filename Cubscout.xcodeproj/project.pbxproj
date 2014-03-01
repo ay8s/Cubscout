@@ -16,8 +16,6 @@
 		94675CC718C290F300517CE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94675CC618C290F300517CE0 /* Images.xcassets */; };
 		94675CCE18C290F400517CE0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94675CCD18C290F400517CE0 /* XCTest.framework */; };
 		94675CCF18C290F400517CE0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94675CAE18C290F300517CE0 /* Cocoa.framework */; };
-		94675CD718C290F400517CE0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94675CD518C290F400517CE0 /* InfoPlist.strings */; };
-		94675CD918C290F400517CE0 /* CubscoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94675CD818C290F400517CE0 /* CubscoutTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +45,6 @@
 		94675CC618C290F300517CE0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94675CCC18C290F300517CE0 /* CubscoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubscoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94675CCD18C290F400517CE0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		94675CD418C290F400517CE0 /* CubscoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CubscoutTests-Info.plist"; sourceTree = "<group>"; };
-		94675CD618C290F400517CE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		94675CD818C290F400517CE0 /* CubscoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubscoutTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				94675CB418C290F300517CE0 /* Cubscout */,
-				94675CD218C290F400517CE0 /* CubscoutTests */,
 				94675CAD18C290F300517CE0 /* Frameworks */,
 				94675CAC18C290F300517CE0 /* Products */,
 			);
@@ -132,24 +126,6 @@
 				94675CBA18C290F300517CE0 /* main.m */,
 				94675CBC18C290F300517CE0 /* Cubscout-Prefix.pch */,
 				94675CBD18C290F300517CE0 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		94675CD218C290F400517CE0 /* CubscoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				94675CD818C290F400517CE0 /* CubscoutTests.m */,
-				94675CD318C290F400517CE0 /* Supporting Files */,
-			);
-			path = CubscoutTests;
-			sourceTree = "<group>";
-		};
-		94675CD318C290F400517CE0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				94675CD418C290F400517CE0 /* CubscoutTests-Info.plist */,
-				94675CD518C290F400517CE0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94675CD718C290F400517CE0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94675CD918C290F400517CE0 /* CubscoutTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +273,6 @@
 				94675CC418C290F300517CE0 /* Base */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		94675CD518C290F400517CE0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94675CD618C290F400517CE0 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -465,6 +431,7 @@
 				94675CDE18C290F400517CE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94675CDF18C290F400517CE0 /* Build configuration list for PBXNativeTarget "CubscoutTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +440,7 @@
 				94675CE118C290F400517CE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
