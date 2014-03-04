@@ -52,6 +52,26 @@
     [SSKeychain setPassword:[hsAPIKeyField stringValue] forService:@"Cubscout" account:@"Cubscout" error:&error];
 }
 
+
+#pragma mark - Agent
+
+- (void)getMailboxes {
+    [ADMailboxesService getMailboxesWithSuccess:^(id responseObject) {
+        NSLog(@"mailboxes %@", responseObject);
+        hsMailboxes = [responseObject valueForKey:@"items"];
+    } failure:^(NSError *error) {
+        NSLog(@"fail %@", error);
+    }];
+}
+
+- (void)getConversations {
+    [ADConversationsService getConversationsForMailbox:@"320" withSuccess:^(id responseObject) {
+        NSLog(@"res %@", responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"err %@", error);
+    }];
+}
+
 }
 
 @end
