@@ -72,6 +72,30 @@
     }];
 }
 
+
+
+#pragma mark - Notifications
+
+- (void)postNotificationWithTitile:(NSString *)title informativeText:(NSString *)text url:(NSString *)url {
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    
+    [notification setTitle:title];
+    
+    [notification setInformativeText:text];
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:url forKey:@"url"];
+    [notification setUserInfo:dict];
+    
+    NSUserNotificationCenter *notificationCenter = [NSUserNotificationCenter defaultUserNotificationCenter];
+    [notificationCenter setDelegate:self];
+    [notificationCenter deliverNotification:notification];
 }
+
+- (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
+    NSURL *ticketURL = [NSURL URLWithString:(NSString *)[[notification userInfo] valueForKey:@"url"]];
+    [[NSWorkspace sharedWorkspace] openURL:ticketURL];
+}
+
 
 @end
