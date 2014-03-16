@@ -28,6 +28,9 @@
     [aStatusItem setView:view];
     [self setStatusItem:aStatusItem];
     
+    // Notification Observer
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toggleWindow:) name:@"toggleWindow" object:nil];
+    
     // Check for password and fetch mailboxes etc.
     if([SSKeychain passwordForService:@"Cubscout" account:@"Cubscout"]){
         [self getMailboxes];
@@ -37,6 +40,16 @@
 }
 
 #pragma mark - Main Window
+
+- (void)toggleWindow:(NSNotification *)notification {
+    if([[notification object] isEqualToString:@"hide"]){
+        [self.window orderOut:self];
+    } else {
+        [NSApp activateIgnoringOtherApps:YES];
+        [self.window makeKeyAndOrderFront:self];
+    }
+}
+
 
 - (IBAction)onButtonClick:(id)sender {
     if(sender == saveBtn){
