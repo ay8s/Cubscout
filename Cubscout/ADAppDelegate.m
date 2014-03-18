@@ -65,6 +65,10 @@
     [SSKeychain setPassword:[hsAPIKeyField stringValue] forService:@"Cubscout" account:@"Cubscout" error:&error];
 }
 
+- (void)applicationDidResignActive:(NSNotification *)aNotification  {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"hideApp" object:@"hide"];
+}
+
 
 #pragma mark - Agent
 
